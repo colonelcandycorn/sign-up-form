@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Playfair Display', serif;
+}
+
+:root {
+    --dark-bg: #b29d90;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw
+}
+
+.left-side {
+    background-image: url("../images/photo-1673963802605-ec8ab2139a82.avif");
+    flex: 1 1 33%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-side {
+    flex: 1 1 66%;
+}
+
+.logo-container {
+    height: 20%;
+    justify-content: center;
+    align-content: center;
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-bg);
+    opacity: 0.7;
+}
+
+/* logo */
+#logo {
+    flex-basis: 25%;
+}
+
+h1 {
+    flex-basis: 25%;
+    font-size: 4rem;
+    align-self: center;
+}
