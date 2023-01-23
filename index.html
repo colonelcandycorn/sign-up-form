@@ -19,10 +19,10 @@
     </div>
 </div>
 <div class="right-side">
-    <div>
+    <div id="text-container">
         <p>
-           This is not a real online service! You know you need something
-            like this in your life to help you realize your deepest dreams.
+           This is not a real online service! You know you need something<br>
+            like this in your life to help you realize your deepest dreams.<br>
             Sign up <em>now</em> to get started.
 
         </p>
@@ -30,8 +30,41 @@
             You <em>know</em> you want to.
         </p>
     </div>
-    <div></div>
-    <div></div>
+    <div id="input">
+        <h2>Let's Do This!</h2>
+        <form action="" method="post" id="contact">
+            <fieldset>
+                <li>
+                    <label for="first-name">FIRST NAME<br></label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </li>
+                <li>
+                    <label for="last-name">LAST NAME<br></label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </li>
+                <li>
+                    <label for="email">EMAIL<br></label>
+                    <input type="email" id="email" name="email" required>
+                </li>
+                <li>
+                    <label for="phone">PHONE NUMBER<br></label>
+                    <input type="number" id="phone" name="phone" required>
+                </li>
+                <li>
+                    <label for="password">PASSWORD<br></label>
+                    <input type="password" id="password" name="password" required>
+                </li>
+                <li>
+                    <label for="confirm">CONFIRM PASSWORD<br></label>
+                    <input type="password" id="confirm" name="confirm" required>
+                </li>
+            </fieldset>
+        </form>
+    </div>
+    <div id="submit">
+        <button type="submit" form="contact" id="submit-button">Create Account</button>
+        <p id="login">Already have an account? <a href="">Log in</a></p>
+    </div>
 </div>
 </body>
 </html>

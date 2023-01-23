@@ -4,6 +4,9 @@
 
 :root {
     --dark-bg: #b29d90;
+    --text-bg: #9e644b;
+    --font-clr: #1f2322;
+    --input-bg: #aea3a5;
     font-size: 16px;
     font-family: 'Playfair Display', serif;
 }
@@ -13,6 +16,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: 100vh;
     width: 100vw
 }
@@ -22,15 +26,18 @@ body {
     flex: 1 1 33%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .right-side {
     flex: 1 1 66%;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-container {
-    height: 20%;
+    margin-top: 30%;
+    height: 20vh;
     justify-content: center;
     align-content: center;
     flex: 1 1 100%;
@@ -49,4 +56,94 @@ h1 {
     flex-basis: 25%;
     font-size: 4rem;
     align-self: center;
+}
+
+#text-container {
+    padding: 25px;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    background-color: var(--text-bg);
+    color: var(--font-clr);
+}
+
+#input {
+    border: 1px solid var(--font-clr);
+    list-style: none;
+    flex: 1 1 0;
+    padding: 25px;
+    color: var(--font-clr);
+    background-color: var(--dark-bg);
+}
+
+#submit {
+    flex: 1 1 0;
+    background-color: var(--text-bg);
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+li {
+    flex: 0 1 35%;
+}
+
+input {
+    margin-top: 5px;
+    width: 75%;
+    height: 1.25rem;
+    background-color: var(--input-bg);
+    border-radius: 5px;
+    color: var(--font-clr);
+    font-family: 'Playfair Display', serif;
+    box-shadow: 3px 2px 3px 0 var(--font-clr);
+}
+
+input:invalid:focus {
+    border: 2px solid red;
+}
+input:valid:focus {
+    border: 2px solid green;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ce6826;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+#submit-button {
+    margin: 30px 25px 15px 25px;
+    border: 2px solid var(--font-clr);
+    box-shadow: 3px 2px 3px 0 var(--font-clr);
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    background-color: #667373;
+}
+
+#submit-button:active {
+    background: #667373;
+    -webkit-box-shadow: inset 0px 0px 5px var(--font-clr);
+    -moz-box-shadow: inset 0px 0px 5px var(--font-clr);
+    box-shadow: inset 0px 0px 5px var(--font-clr);
+    outline: none;
+}
+
+#login{
+    margin-left: 25px;
+    font-size: 1.1rem;
 }
